@@ -1,6 +1,6 @@
 CREATE TABLE "users" (
-  "id" int,
-  "username" str,
-  "email" str,
-  "hashedPassword" str
+  "id" serial PRIMARY KEY,
+  "username" VARCHAR ( 255 ) UNIQUE NOT NULL,
+  "email" VARCHAR ( 255 ) UNIQUE NOT NULL,
+  "hashed_password" VARCHAR ( 255 ) NOT NULL
 );
